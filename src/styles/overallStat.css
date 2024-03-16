@@ -1,0 +1,677 @@
+.overall-stat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.overall-stat-label {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(2, 2, 255);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.sort-by-year-wrapper {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(329deg, rgba(130,130,130,1) 0%, rgba(3,86,215,1) 100%);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.sort-by-year-wrapper label, .sort-by-month-wrapper label {
+  cursor: pointer;
+}
+#sort-by-year, #sort-by-month {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sort-by-month-wrapper {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(329deg, rgba(130,130,130,1) 0%, rgba(3,215,99,1) 100%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.exer-stress-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Sleep diagram*/
+.sleep-stat-wrapper, .meals-stat-wrapper, .steps-stat-wrapper {
+  margin: 10px;
+  background-color: white;
+  padding: 10px 15px 10px 10px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.sleep-diagram-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 20px;
+  color: rgb(112, 169, 250);
+}
+.sleep-diagram, .meals-diagram, .steps-diagram {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.sleep-bar {
+  background-color: rgb(112, 169, 250);
+  color: white;
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sleep-bar:hover {
+  background-color: rgb(63, 143, 255);
+}
+.sleep-bar-wrapper, .meals-bar-wrapper, .steps-bar-wrapper {
+  height: 200px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sleep-count-label, .meals-count-label {
+  cursor: pointer;
+}
+.sleep-hours-wrapper, .meals-wrapper, .steps-wrapper, .exercises-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.sleep-hours-label, .meals-label, .steps-label {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.sleep-hours-bars, .meals-bars, .steps-bars {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-end;
+}
+.bar-fill-height {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.days-of-month-label {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.no-sleep-data-div {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.info-div {
+  background-color: rgb(94, 110, 115);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.change-sleep-btn, .change-meals-btn, .change-steps-btn {
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.15s;
+}
+.change-sleep-btn:hover, .change-meals-btn:hover, .change-steps-btn:hover {
+  color: rgb(0, 170, 226);
+}
+.change-sleep-btn:active, .change-meals-btn:active, .change-steps.btn:active {
+  color: rgb(62, 254, 254);
+}
+.update-div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.update-sleep-input, .update-meals-input {
+  width: 40px;
+  font-size: 16px;
+}
+.accept-update-sleep-btn, .accept-update-meals-btn, .accept-update-steps-btn {
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(0, 135, 193);
+  border-radius: 5px;
+  transition: 0.15s;
+}
+.accept-update-sleep-btn:hover, .accept-update-meals-btn:hover, .accept-update-steps-btn:hover {
+  background-color: rgb(50, 159, 254);
+  box-shadow: 0px 0px 5px blue;
+}
+.accept-update-sleep-btn:active, .accept-update-meals-btn:active, .accept-update-steps-btn:active {
+  background-color: white;
+  color: rgb(50, 159, 254);
+}
+.empty-field {
+  background-color: rgb(209, 0, 0);
+  color: white;
+  margin-top: 5px;
+  padding: 0px 5px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.date-label {
+  text-align: center;
+}
+.upd-del-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  column-gap: 30px;
+}
+.delete-stat-btn {
+  font-size: 30px;
+  column-gap: 10px;
+  cursor: pointer;
+}
+.delete-stat-btn:hover {
+  color: rgb(255, 80, 80);
+}
+.delete-stat-btn:active {
+  color: rgb(251, 36, 36);
+}
+.confirm-delete-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(255, 226, 96);
+}
+.confirm-delete-btns-wrapper {
+  margin-top: 5px;
+}
+.confirm-delete-stat-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(0, 135, 193);
+  border-radius: 5px;
+  transition: 0.15s;
+}
+.confirm-delete-stat-btn:hover {
+  background-color: rgb(50, 159, 254);
+  box-shadow: 0px 0px 5px blue;
+}
+.confirm-delete-stat-btn:active {
+  background-color: white;
+  color: rgb(50, 159, 254);
+}
+.cancel-delete-stat-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(209, 0, 0);
+  background-color: white;
+  margin-left: 40px;
+  border-radius: 5px;
+}
+.cancel-delete-stat-btn:hover {
+  box-shadow: 0px 0px 5px red;
+  color: red;
+}
+.cancel-delete-stat-btn:active {
+  color: white;
+  background-color: rgb(209, 0, 0);
+}
+
+/*Meals diagram*/
+.meals-diagram-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 20px;
+  color: rgb(255, 187, 99);
+}
+.meals-bar {
+  background-color: rgb(255, 187, 99);
+  color: white;
+  text-align: center;
+  width: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.meals-bar:hover {
+  background-color: rgb(255, 161, 37);
+}
+
+/*Steps diagram*/
+.steps-diagram-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 20px;
+  color: rgb(0, 176, 41);
+}
+.steps-bar-fill-height {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.steps-bar {
+  background-color: rgb(0, 176, 41);
+  color: white;
+  text-align: center;
+  width: 20px;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.steps-bar:hover {
+  background-color: rgb(0, 230, 54);
+}
+.update-steps-input {
+  width: 55px;
+}
+.steps-count-label {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  width: 20px;
+  cursor: pointer;
+}
+
+/*Physical activity*/
+.exercises-stat-wrapper, .stress-stat-wrapper {
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.exercises-diagram-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 10px 20px 10px;
+  color: rgb(2, 195, 188);
+}
+.exercises-bar-fill-height, .stress-bar-fill-height {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.exercises-diagram, .stress-diagram {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+}
+.exercises-bars, .stress-bars {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  row-gap: 15px;
+  align-items: flex-start;
+}
+.exercise-bar {
+  position: relative;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-start;
+}
+.render-exercise {
+  background-color: rgb(2, 195, 188);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.render-exercise:hover {
+  background-color: rgb(0, 234, 227);
+}
+.fa-dumbbell {
+  color: white;
+  font-size: 20px;
+}
+.fa-ban {
+  font-size: 20px;
+  color: black;
+}
+.render-no-exercise {
+  background-color: rgb(254, 126, 126);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.render-no-exercise:hover {
+  background-color: rgb(255, 74, 74);
+}
+.info-div-circle {
+  background-color: rgb(94, 110, 115);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: -50px;
+  left: -70px;
+  width: 150px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-wrapper {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 5px;
+}
+.exer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(2, 195, 188);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.exer:hover {
+  background-color: rgb(0, 234, 227);
+}
+.no-exer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(254, 126, 126);
+  cursor: pointer;
+}
+.no-exer:hover {
+  background-color: rgb(255, 74, 74);
+}
+.chosen {
+  background-color: rgb(2, 176, 250);
+  box-shadow: 0px 0px 10px blue;
+}
+.chosen-ban {
+  background-color: rgb(255, 71, 71);
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+.chosen-ban .fa-ban {
+  color: white;
+}
+.accept-update-exer-btn {
+  background-color: rgb(0, 135, 193);
+  padding: 3px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.accept-update-exer-btn:hover {
+  background-color: rgb(50, 159, 254);
+  box-shadow: 0px 0px 5px blue;
+}
+.accept-update-exer-btn:active {
+  background-color: white;
+  color: rgb(50, 159, 254);
+}
+.warning-icon-field {
+  background-color: rgb(209, 0, 0);
+  color: white;
+  margin-top: 5px;
+  padding: 0px 5px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/*Stress statistics*/
+.stress-diagram-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 10px 20px 10px;
+  color: rgb(219, 3, 129);
+}
+.render-stress {
+  background-color: rgb(254, 126, 126);
+  border-radius: 50%;
+  padding: 10px 9px 10px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.render-stress:hover {
+  background-color: rgb(255, 74, 74);
+}
+.render-no-stress {
+  background-color: rgb(0, 130, 222);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.render-no-stress:hover {
+  background-color: rgb(0, 191, 255);
+}
+.fa-boltLighting {
+  font-size: 20px;
+  color: black;
+}
+.fa-yin-yang {
+  color: white;
+  font-size: 20px;
+}
+.stress-bar {
+  position: relative;
+}
+.stress {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(254, 126, 126);
+  cursor: pointer;
+}
+.stress:hover {
+  background-color: rgb(255, 74, 74);
+}
+.no-stress {
+  background-color: rgb(0, 130, 222);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.no-stress:hover {
+  background-color: rgb(0, 191, 255);
+}
+.chosen-stress {
+  background-color: rgb(255, 71, 71);
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+.chosen-stress .fa-boltLighting {
+  color: white;
+}
+.chosen-peace {
+  background-color: rgb(2, 176, 250);
+  box-shadow: 0px 0px 10px blue;
+}
+
+.hidden {
+  display: none !important;
+}
+@media (max-width: 1299.99px) {
+  .over-all-stat-wrapper-main {
+    width: 100%;
+  }
+  .overall-stat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .overall-stat-label {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1099.99px) {
+  .sleep-stat-wrapper, .meals-stat-wrapper, .steps-stat-wrapper {
+    width: 80%;
+    margin: 10px;
+    background-color: white;
+    padding: 10px 15px 10px 10px;
+    border-radius: 10px;
+  }
+  .sleep-diagram, .meals-diagram, .steps-diagram {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .sleep-diagram-label, .meals-diagram-label {
+    text-align: center;
+  }
+  .sleep-hours-bars, .meals-bars, .steps-bars {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 0px;
+    row-gap: 10px;
+    align-items: flex-start;
+  }
+  .bar-fill-height {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .bar-column {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 5px;
+    width: 100%;
+  }
+  .date-label {
+    width: 30px;
+  }
+  .sleep-bar-wrapper, .meals-bar-wrapper, .steps-bar-wrapper {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: left;
+    column-gap: 10px;
+  }
+  .sleep-bar {
+    background-color: rgb(112, 169, 250);
+    color: white;
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .info-div {
+    font-size: 16px;
+    top: -35px;
+    width: 150px;
+    margin-left: 70%;
+  }
+  .steps-count-label {
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transform: rotate(0deg);
+    width: 20px;
+    cursor: pointer;
+  }
+  .steps-bar {
+    background-color: rgb(0, 176, 41);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transform: rotate(0deg);
+    cursor: pointer;
+  }
+  .exer-stress-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .info-div-circle {
+    position: absolute;
+    top: -60px;
+    left: -70px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 699.99px) {
+  .sleep-stat-wrapper, .meals-stat-wrapper, .steps-stat-wrapper {
+    width: 90%;
+  }
+  .info-div {
+    font-size: 16px;
+    position: absolute;
+    top: -35px;
+    margin-left: 0;
+  }
+  .exercises-stat-wrapper, .stress-stat-wrapper {
+    margin: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

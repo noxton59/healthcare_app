@@ -1,0 +1,356 @@
+.settings-field {
+  display: flex;
+  flex-direction: column;
+}
+.settings-label {
+  font-size: 30px;
+  color: rgb(0, 139, 253);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.pass-change-field {
+  display: flex;
+  flex-direction: column;
+}
+.change-stat-field, .change-name-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.change-pass-label, .change-stat-label, .clear-history-label, .change-name-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.pass-change-wrapper, .change-stat-wrapper, .change-name-wrapper {
+  display: grid;
+  grid-template-columns: 200px 250px;
+  row-gap: 20px;
+  text-align: right;
+  column-gap: 10px;
+  position: relative;
+}
+.change-stat-wrapper, .change-name-wrapper {
+  grid-template-columns: 100px 250px;
+}
+.pass-change-wrapper label, .change-stat-wrapper label, .change-name-wrapper label {
+  font-size: 20px;
+}
+#old-pass, #new-pass, #new-pass-rep, #change-age, #change-height, #change-weight, #change-fname, #change-lname {
+  padding: 3px 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.change-pass-btns, .change-stat-btns, .change-name-btns {
+  display: flex;
+  margin: 20px 20px;
+  gap: 20px;
+}
+.clear-history-field {
+  margin-top: 40px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+}
+.clear-history-btn {
+  color: rgb(195, 0, 0);
+  border: 2px solid rgb(195, 0, 0);
+  background-color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.clear-history-btn:hover {
+  box-shadow: 0px 0px 10px rgb(200, 0, 0);
+}
+.clear-history-btn:active {
+  background-color: rgb(195, 0, 0);
+  color: white;
+}
+.pass-alert-msg {
+  color: rgb(195, 0, 0);
+  outline: 2px solid rgb(195, 0, 0);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.stat-alert-msg {
+  color: rgb(195, 0, 0);
+  outline: 2px solid rgb(195, 0, 0);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.pass-changed {
+  position: absolute;
+  top: -10px;
+  left: 50px;
+  padding: 70px 100px;
+  background-color: rgb(2, 192, 2);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  animation: fadeIn 1.5s;
+}
+.change-pass-btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: rgb(0, 139, 253);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.change-pass-btn:hover {
+  background-color: rgb(47, 197, 252);
+  box-shadow: 0px 0px 10px rgba(32, 121, 255, 0.7)
+}
+.change-pass-btn:active {
+  background-color: white;
+  color:rgb(0, 139, 253);
+  outline: 2px solid rgb(0, 139, 253);
+}
+.change-stat-btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: rgb(0, 139, 253);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.change-stat-btn:hover {
+  background-color: rgb(47, 197, 252);
+  box-shadow: 0px 0px 10px rgba(32, 121, 255, 0.7)
+}
+.change-stat-btn:active {
+  background-color: white;
+  color: rgb(0, 139, 253);
+  outline: 2px solid rgb(0, 139, 253);
+}
+.change-stat-success {
+  position: absolute;
+  top: 0px;
+  padding: 70px 100px;
+  background-color: rgb(2, 192, 2);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  animation: fadeIn 1.5s;
+}
+.change-name-alert-msg {
+  top: 85px;
+  left: 30px;
+  color: rgb(195, 0, 0);
+  border: 2px solid rgb(195, 0, 0);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.change-name-btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: rgb(0, 139, 253);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.change-name-btn:hover {
+  background-color: rgb(47, 197, 252);
+  box-shadow: 0px 0px 10px rgba(32, 121, 255, 0.7)
+}
+.change-name-btn:active {
+  background-color: white;
+  color:rgb(0, 139, 253);
+  outline: 2px solid rgb(0, 139, 253);
+}
+.change-name-success {
+  position: absolute;
+  top: -30px;
+  left: 15px;
+  padding: 70px 100px;
+  background-color: rgb(2, 192, 2);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  animation: fadeIn 1.5s;
+  z-index: 1;
+}
+.clear-health-conf {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 30px;
+  text-align: center;
+}
+.clear-history-btns-wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+.clear-health-confirm-btn {
+  margin-right: 20px;
+  padding: 5px 20px;
+  border: 2px solid rgb(0, 139, 253);
+  color: rgb(0, 139, 253);
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  transition: 0.2s;
+}
+.clear-health-confirm-btn:hover {
+  box-shadow: 0px 0px 10px rgba(32, 121, 255, 0.7);
+}
+.clear-health-confirm-btn:active {
+  color: white;
+  background-color: rgb(0, 139, 253);
+}
+.clear-health-cancel-btn {
+  padding: 5px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(195, 0, 0);
+  transition: 0.2s;
+}
+.clear-health-cancel-btn:hover {
+  box-shadow: 0px 0px 10px rgb(200, 0, 0);
+}
+.clear-health-cancel-btn:active {
+  background-color: white;
+  color: rgb(195, 0, 0);
+  outline: 2px solid rgb(195, 0, 0);
+}
+.clear-history-success {
+  position: absolute;
+  top: 0px;
+  padding: 70px 100px;
+  background-color: rgb(0, 139, 253);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  animation: fadeIn 1.5s;
+}
+@media (max-width: 699.99px) {
+  .settings-wrapper-main {
+    width: 80%;
+  }
+  .settings-label {
+    text-align: center;
+  }
+  .pass-change-field {
+    background: linear-gradient(270deg, rgba(206,103,237,1) 0%, rgba(0,130,198,1) 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  .change-pass-label, .change-stat-label, .clear-history-label, .change-name-label {
+    color: white;
+    text-align: center;
+  }
+  .pass-change-wrapper, .change-stat-wrapper, .change-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: left;
+    column-gap: 0px;
+    position: relative;
+    color: white;
+  }
+  .change-stat-field {
+    background: linear-gradient(270deg, rgba(103,237,202,1) 0%, rgba(0,130,198,1) 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  .change-name-field {
+    background: linear-gradient(270deg, rgba(207,237,103,1) 0%, rgba(0,130,198,1) 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  .clear-history-field {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .change-pass-btns, .change-stat-btns, .change-name-btns {
+    display: flex;
+    gap: 0px;
+    flex-direction: column-reverse;
+    row-gap: 15px;
+    justify-content: center;
+    margin: 20px 20px;
+  }
+  .change-pass-btn, .change-stat-btn, .change-name-btn {
+    width: 60%;
+    margin: 0px auto;
+  }
+  .pass-alert-msg {
+    color: rgb(248, 0, 0);
+    outline: 2px solid rgb(248, 0, 0);
+    text-align: center;
+  }
+  .stat-alert-msg {
+    color: rgb(248, 0, 0);
+    outline: 2px solid rgb(248, 0, 0);
+    text-align: center;
+  }
+  .pass-changed, .change-stat-success, .change-name-success {
+    text-align: center;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    padding: 80px 0px;
+  }
+  .change-name-success {
+    top: 0px;
+  }
+}
+@media (max-width: 399.99px) {
+  .settings-wrapper-main {
+    width: 100%;
+  }
+  .pass-changed, .change-stat-success, .change-name-success {
+    top: 20px;
+    left: 0%;
+    right: 0%;
+    padding: 80px 0px;
+  }
+  .change-name-success {
+    top: 0px;
+  }
+  .change-pass-btn, .change-stat-btn, .change-name-btn {
+    width: 80%;
+  }
+}
+
