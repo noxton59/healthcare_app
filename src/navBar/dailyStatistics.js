@@ -17,7 +17,7 @@ function DailyStatistics({data, updateBodyStat, logged}) {
         },
         body: JSON.stringify(stats)
       }
-      const request = await fetch(`/addStats/${data[1]}`, option);
+      const request = await fetch(`https://healthcare-app-1.onrender.com/addStats/${data[1]}`, option);
       const json = await request.json();
       if (json === "date exists") {
         setShowAlert(true);

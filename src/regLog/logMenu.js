@@ -46,7 +46,7 @@ function LogMenu({ data, logOut }) {
     const option = {
       method: "DELETE"
     };
-    const request = await fetch(`/deleteAcc/${data[1]}`, option);
+    const request = await fetch(`https://healthcare-app-1.onrender.com/deleteAcc/${data[1]}`, option);
     const json = await request.json();
     if (json === "user deleted") {
       logOutHandler();

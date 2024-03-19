@@ -30,7 +30,7 @@ function RegField ({width}) {
             }, 
             body: JSON.stringify(data)
           }
-          const request = await fetch("/addUser", options);
+          const request = await fetch("https://healthcare-app-1.onrender.com/addUser", options);
           const json = await request.json();
           console.log(json);
           if (json === "success") {

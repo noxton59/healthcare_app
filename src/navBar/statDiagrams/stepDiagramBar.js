@@ -66,7 +66,7 @@ function StepDiagramBar({item, maxValueSteps, userLogin, updateUserHealth, width
     const option = {
       method: "POST"
     };
-    const request = await fetch(`/updateSteps/${userLogin}/${item.id}&${steps}`, option);
+    const request = await fetch(`https://healthcare-app-1.onrender.com/updateSteps/${userLogin}/${item.id}&${steps}`, option);
     const json = await request.json();
     if (json[0] === "updated") {
       updateUserHealth(json[1]);
@@ -82,7 +82,7 @@ function StepDiagramBar({item, maxValueSteps, userLogin, updateUserHealth, width
     const option = {
       method: "DELETE"
     };
-    const request = await fetch(`/deleteStat/${userLogin}/${item.id}`, option);
+    const request = await fetch(`https://healthcare-app-1.onrender.com/deleteStat/${userLogin}/${item.id}`, option);
     const json = await request.json();
     if (json[0] === "stat deleted") {
       updateUserHealth(json[1]);
