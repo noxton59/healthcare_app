@@ -24,9 +24,9 @@ function LogField ({getData}) {
       const option = {
         method: "GET"
       }
-      const request = await fetch(`https://healthcare-app-1.onrender.com/login/${login}&${password}`, option);
+      const request = await fetch(`/login/${login}&${password}`, option);
       const json = await request.json();
-      console.log(json);
+
       function navigateTo() {
         if (json[5].length === 0) {
           navigate("/bodyInfo")

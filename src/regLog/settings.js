@@ -26,7 +26,7 @@ function Settings({data, updateBodyInfo, updateName, clearHealth, logged}) {
         const option = {
           method: "PUT"
         }
-        const request = await fetch(`https://healthcare-app-1.onrender.com/changePass/${data[1]}&${oldPass}/${newPass}`, option);
+        const request = await fetch(`/changePass/${data[1]}&${oldPass}/${newPass}`, option);
         const json = await request.json();
         if (json === "password changed") {
           document.querySelector("#old-pass").value = "";
@@ -66,7 +66,7 @@ function Settings({data, updateBodyInfo, updateName, clearHealth, logged}) {
       const option = {
         method: "PUT"
       };
-      const request = await fetch(`https://healthcare-app-1.onrender.com/changeStats/${data[1]}/${ageRound}&${heightDec}&${weightDec}`, option);
+      const request = await fetch(`/changeStats/${data[1]}/${ageRound}&${heightDec}&${weightDec}`, option);
       const json = await request.json();
       updateBodyInfo(json);
       setchangeStatAlert(false);
@@ -89,7 +89,7 @@ function Settings({data, updateBodyInfo, updateName, clearHealth, logged}) {
       const option = {
         method: "PUT"
       };
-      const request = await fetch(`https://healthcare-app-1.onrender.com/changeName/${data[1]}/${fname}&${lname}`, option);
+      const request = await fetch(`/changeName/${data[1]}/${fname}&${lname}`, option);
       const json = await request.json();
       updateName(json);
       setChangeNameAlert(false);
@@ -104,7 +104,7 @@ function Settings({data, updateBodyInfo, updateName, clearHealth, logged}) {
     const option = {
       method: "DELETE"
     }
-    const request = await fetch(`https://healthcare-app-1.onrender.com/deleteHS/${data[1]}`, option);
+    const request = await fetch(`/deleteHS/${data[1]}`, option);
     const json = await request.json();
     clearHealth(json);
     setClearHistoryConf(false);

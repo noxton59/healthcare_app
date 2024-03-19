@@ -30,7 +30,7 @@ function RegField ({width}) {
             }, 
             body: JSON.stringify(data)
           }
-          const request = await fetch("https://healthcare-app-1.onrender.com/addUser", options);
+          const request = await fetch("/addUser", options);
           const json = await request.json();
           console.log(json);
           if (json === "success") {
@@ -40,12 +40,10 @@ function RegField ({width}) {
               setRegFieldAlert(false);
               setRegFieldMSg(null);
               setRegFieldSucces(true);
-              console.log(width);
               setTimeout(()=>{setRegFieldSucces(false); navigate("/login");}, 1400);
             } else if (width < 700) {
               setRegFieldAlert(true);
               setRegFieldMSg("Registration is successful");
-              console.log(width);
               setTimeout(()=>{navigate("/login")}, 1400);
             }
           } else if (json === "user exists") {

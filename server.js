@@ -18,7 +18,7 @@ app.listen(port, () => {console.log(`Listening to port ${port}`)});
 const dataBase = new DataStore({ filename: "dataBase.db", autoload: true});
 dataBase.setAutocompactionInterval(10000);
 
-app.get("*", (req,res)=>{
+app.get("/", (req,res)=>{
   res.sendFile(path.join(buildPath, "index.html"));
 })
 
