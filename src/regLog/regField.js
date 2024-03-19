@@ -31,7 +31,7 @@ function RegField ({width}) {
             body: JSON.stringify(data)
           }
           const request = await fetch("/addUser", options);
-          const json = await request.json();
+          const json = await request.text();
           console.log(json);
           if (json === "success") {
             setData({email: "", login: "", fname: "", lname: "", password: ""});
