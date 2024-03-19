@@ -10,7 +10,7 @@ import BodyInfo from "./navBar/bodyInfo.js";
 import DailyStatistics from "./navBar/dailyStatistics.js";
 import OverallStatistics from "./navBar/overallStatistics.js";
 import Recommendation from "./navBar/recommendation.js";
-
+//find a way to deploy site to the server
 function App() {
   const [logged, setLogged] = useState(false);
   const [data, setData] = useState([]);
@@ -118,3 +118,4 @@ function App() {
 }
 
 export default App;
+/* "start": "react-scripts start", */

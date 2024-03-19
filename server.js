@@ -1,15 +1,26 @@
 import express from "express";
 import cors from "cors";
 import DataStore from "@seald-io/nedb";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-const port = process.env.PORT || 3500;
+const port = process.env.PORT || 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const buildPath = path.join(__dirname, "build");
+
+app.use(express.static(buildPath));
+app.use(cors());
+app.use(express.json({ limit: "1mb" }))
+
 app.listen(port, () => {console.log(`Listening to port ${port}`)});
 const dataBase = new DataStore({ filename: "dataBase.db", autoload: true});
 dataBase.setAutocompactionInterval(10000);
 
-app.use(cors());
-app.use(express.json({ limit: "1mb" }))
+app.get("*", (req,res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
 
 app.post("/addUser", async (request, response) => {
   const data = request.body;
@@ -202,7 +213,9 @@ app.get("/login/:loginPass", (request, response) => {
   const pass = loginPass[1];
   
   dataBase.find({login: login}, (err, data) => {
-    if (data.length === 0) {
+    if (err) {
+      response.json(err);
+    } else if (data.length === 0) {
     response.json("no user")
     } else {
     if (data[0].password === pass) {

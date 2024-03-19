@@ -26,7 +26,7 @@ function LogField ({getData}) {
       }
       const request = await fetch(`/login/${login}&${password}`, option);
       const json = await request.json();
-  
+      console.log(json);
       function navigateTo() {
         if (json[5].length === 0) {
           navigate("/bodyInfo")
