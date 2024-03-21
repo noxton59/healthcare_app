@@ -158,6 +158,9 @@
   width: 40px;
   font-size: 16px;
 }
+.update-steps-input {
+  width: 60px;
+}
 .accept-update-sleep-btn, .accept-update-meals-btn, .accept-update-steps-btn {
   font-size: 30px;
   margin-left: 10px;
