@@ -38,7 +38,7 @@ function LogField ({getData}) {
       if (json[0] === "match") {
         getData(json);
         setLogFieldAlert(false);
-        setLogFieldMsg(false);
+        setLogFieldMsg(null);
         document.querySelector("#login").value = "";
         document.querySelector("#password").value = "";
         regSuccess.textContent = `Welcome ${json[2]} ${json[3]}`;
