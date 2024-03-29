@@ -84,7 +84,7 @@ function RegField ({width}) {
           id="login-input" 
           required={true}
           value={data.login}
-          onChange={(e)=>{setData({...data, login: e.target.value})}}></input>
+          onChange={(e)=>{setData({...data, login: (e.target.value).toLowerCase()})}}></input>
         <label htmlFor="fname-input">First Name</label>
         <input 
           type="text" 

@@ -14,7 +14,7 @@ function LogField ({getData}) {
 
 
   async function logIn() {
-    const login = document.querySelector("#login").value;
+    const login = (document.querySelector("#login").value).toLowerCase();
     const password = document.querySelector("#password").value;
     const rememberMe = document.querySelector("#remember-me").checked;
     if (login === "" || password === "") {
