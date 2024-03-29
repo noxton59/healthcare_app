@@ -15,7 +15,8 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 code {
@@ -198,7 +199,8 @@ header {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
   }
   header {
