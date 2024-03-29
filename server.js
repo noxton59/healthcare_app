@@ -21,6 +21,28 @@ dataBase.setAutocompactionInterval(10000);
 app.get("/", (req,res)=>{
   res.sendFile(path.join(buildPath, "index.html"));
 })
+app.get("/login", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/register", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/bodyInfo", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/dailyStat", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/overallStat", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/recomendation", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+app.get("/settings", (req, res)=>{
+  res.sendFile(path.join(buildPath, "index.html"));
+})
+
 
 app.post("/addUser", async (request, response) => {
   const data = request.body;
