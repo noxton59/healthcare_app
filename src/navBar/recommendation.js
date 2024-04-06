@@ -265,7 +265,7 @@ function Recommendation({data, logged}) {
       <div className="statistics-recommendation">
         <div className="sort-wrapper">
           <div className="recommend-sort-by-year-wrapper">
-            <label htmlFor="recommend-sort-by-year">Selected year</label>
+            <label htmlFor="recommend-sort-by-year" className="label-selected-year">Selected year</label>
             <select id="recommend-sort-by-year" value={selectedYear} onChange={(e)=>{setSelectedYear(e.target.value)}}>
               <option value="2024">2024</option>
               <option value="2025">2025</option>
@@ -273,7 +273,7 @@ function Recommendation({data, logged}) {
             </select>
           </div>
           <div className="recommend-sort-by-month-wrapper">
-            <label htmlFor="recommend-sort-by-month">Selected month</label>
+            <label htmlFor="recommend-sort-by-month" className="label-selected-month">Selected month</label>
             <select id="recommend-sort-by-month" value={selectedMonth} onChange={(e)=>{setSelectedMonth(e.target.value)}}>
               <option value="0">January</option>
               <option value="1">February</option>
